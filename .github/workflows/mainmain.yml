@@ -42,4 +42,4 @@ jobs:
         run: |
           ssh -t ubuntu@$SERVER_IP -i pem.pem 'docker pull alexdahal12/mywebapp '
           ssh -t ubuntu@$SERVER_IP -i pem.pem 'docker stop mywebapp && docker rm mywebapp'
-          ssh -t ubuntu@$SERVER_IP -i pem.pem 'docker run --name mywebapp -p 80:80 -d alexdahal12/mywebapp'
+          ssh -t ubuntu@$SERVER_IP -i pem.pem 'docker run --name mywebapp -p 8080:80 -d alexdahal12/mywebapp'
