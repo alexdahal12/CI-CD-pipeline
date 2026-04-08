@@ -36,7 +36,7 @@ jobs:
           echo $EC2_SSH_KEY | base64 -d > pem.pem && chmod 400 pem.pem
           ssh-keygen -R $SERVER_IP
         env: 
-          SSH_KEY64: ${{ secrets.EC2_SSH_KEY }}
+          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
 
       - name: "Docker Pull and Restart Docker"
         run: |
